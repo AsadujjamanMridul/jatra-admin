@@ -27,7 +27,7 @@ Here comes the Jatra app to solve this particular problem. Suppose the user has 
   Credentials:
 </h2>
 <p align="center">
-  Email: admin@gmail.com
+  Email: admin@gmail.com <br/>
   Password: 123456
 </p>
 <br/>
