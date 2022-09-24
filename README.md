@@ -23,8 +23,10 @@ Here comes the Jatra app to solve this particular problem. Suppose the user has 
   <a href="https://jatra-admin.netlify.app/">Admin Panel</a>
 </h3>
 <br/>
+<h2 align="center">
+  Credentials:
+</h2>
 <p align="center">
-  ### Credentials:
   Email: admin@gmail.com
   Password: 123456
 </p>
