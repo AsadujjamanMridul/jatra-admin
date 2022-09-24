@@ -19,13 +19,12 @@ quarrels between the bus fare collectors and the passengers.
 Here comes the Jatra app to solve this particular problem. Suppose the user has set the source and destination in the app and bus lists of that route. In that case, he will get the rout-based bus fare, fixed by the government, the number of traffic jams on the road, estimated arrival time and much more important information using Google Map API. If the user wants, he can use all the facilities offline. This Jatra app can be a valuable companion for passengers with overall bus-route information
 
 <br/>
-<h3 align="center">
-  <a href="https://jatra-admin.netlify.app/">Admin Panel</a>
-</h3>
-<br/>
 <h2 align="center">
-  Credentials:
+  <a href="https://jatra-admin.netlify.app/">Admin Panel</a>
 </h2>
+<h3 align="center">
+  Credentials:
+</h3>
 <p align="center">
   Email: admin@gmail.com <br/>
   Password: 123456
