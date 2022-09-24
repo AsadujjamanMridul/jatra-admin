@@ -1,0 +1,11 @@
+.nav{
+  min-height: 56px;
+}
+
+.profileButton:hover span{
+  display: none;
+}
+
+.profileButton:hover::before{
+  content: 'Sign Out';
+}
