@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-  addDoc,
   collection,
   query,
   where,
   onSnapshot,
-  deleteDoc,
   updateDoc,
   doc,
 } from "firebase/firestore";
 import { db } from "../../firebase.config";
-import { BiMessageSquareDetail } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
+import { Radio, RadioGroup } from "@chakra-ui/react";
 
 const EditRoute = () => {
   const [modalHidden, setModalHidden] = useState(false);
@@ -39,6 +37,18 @@ const EditRoute = () => {
   );
 
   const [id, setId] = useState(null);
+
+  const [studentFareAvaibility, setStudentFareAvaibility] = useState(
+    searchResult?.studentFare ? "true" : "false"
+  );
+
+  useEffect(() => {
+    if (studentFareAvaibility === "true") {
+      setStudentFare(true);
+    } else {
+      setStudentFare(false);
+    }
+  }, [studentFareAvaibility]);
 
   const handleUpdateRoute = async () => {
     setLoading(true);
@@ -71,7 +81,7 @@ const EditRoute = () => {
       where("routeNumber", "==", searchRouteNumber.toLowerCase())
     );
 
-    const searchListener = onSnapshot(q, (querySnapshot) => {
+    onSnapshot(q, (querySnapshot) => {
       const list = [];
       querySnapshot.forEach((doc) => {
         list.push({ ...doc.data(), id: doc.id });
@@ -147,14 +157,25 @@ const EditRoute = () => {
             required
             defaultValue={routeNumber}
           />
-          <input
-            className="bg-gray-50  h-10 p-3 rounded-md w-80"
-            type="text"
-            placeholder="Student fare avaibility"
-            onChange={(e) => setStudentFare(e.target.value)}
-            required
-            defaultValue={studentFare}
-          />
+          <div className="p-3">
+            <label className="font_inter font-medium text-slate-700">
+              Student fare avaibility
+            </label>
+
+            <RadioGroup
+              defaultValue={"true"}
+              value={studentFareAvaibility}
+              onChange={setStudentFareAvaibility}
+              className="mt-4 font_inter text-xs"
+            >
+              <Radio value={"true"} colorScheme="teal">
+                <p className="font_inter text-xs sm:text-sm text-slate-700">Available</p>
+              </Radio>
+              <Radio value={"false"} colorScheme="red"  className="font_inter text-xs ml-5">
+                <p className="font_inter text-xs sm:text-sm text-slate-700">Not Available</p>
+              </Radio>
+            </RadioGroup>
+          </div>
         </div>
         <button
           className="bg-slate-800 mt-12 p-3 rounded-md w-80 text-white grid place-items-center hover:bg-slate-900"

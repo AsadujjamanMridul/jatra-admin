@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase.config";
+import { Radio, RadioGroup } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 const AddRoute = () => {
   const [source, setSource] = useState(null);
@@ -11,10 +13,21 @@ const AddRoute = () => {
   const [routeName, setRouteName] = useState(null);
   const [routeNumber, setRouteNumber] = useState(null);
 
+  const [studentFareAvaibility, setStudentFareAvaibility] = useState("true");
+
   const [loading, setLoading] = useState(false);
+
+  useEffect(()=>{
+    if (studentFareAvaibility === "true") {
+      setStudentFare(true);
+    } else {
+      setStudentFare(false);
+    }
+  },[studentFareAvaibility])
 
   const handleAddBus = async () => {
     setLoading(true);
+
     try {
       await addDoc(collection(db, "allRoutes"), {
         source: source,
@@ -27,7 +40,7 @@ const AddRoute = () => {
         date: new Date(),
       });
       setLoading(false);
-      alert("Route added successfully!")
+      alert("Route added successfully!");
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -80,14 +93,28 @@ const AddRoute = () => {
             onChange={(e) => setRouteNumber(e.target.value.toLowerCase())}
             required
           />
-          <input
-            className="bg-gray-50  h-10 p-3 rounded-md w-80"
-            type="text"
-            placeholder="Student fare avaibility"
-            onChange={(e) => setStudentFare(e.target.value)}
-            required
-          />
+
+          <div className="p-3">
+            <label className="font_inter font-medium text-slate-700">
+              Student fare avaibility
+            </label>
+
+            <RadioGroup
+              defaultValue={"true"}
+              value={studentFareAvaibility}
+              onChange={setStudentFareAvaibility}
+              className="mt-4 font_inter text-xs"
+            >
+              <Radio value={"true"} colorScheme="teal">
+                <p className="font_inter text-xs sm:text-sm text-slate-700">Available</p>
+              </Radio>
+              <Radio value={"false"} colorScheme="red"  className="font_inter text-xs ml-5">
+                <p className="font_inter text-xs sm:text-sm text-slate-700">Not Available</p>
+              </Radio>
+            </RadioGroup>
+          </div>
         </div>
+
         <button
           className="bg-slate-800 mt-12 p-3 rounded-md w-80 text-white grid place-items-center hover:bg-slate-900"
           onClick={handleAddBus}
