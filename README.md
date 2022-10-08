@@ -1,71 +1,55 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img src="src/assets/logo.png" height="45" style="margin-right: 10px"/>
+</h1>
+<h1 align="center">
+  Jatra Admin
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Your companion on the go
 
-## Available Scripts
+'Jatra' is a mobile app built with React Native, which basically provides all route information including fare and distance of all bus routes based in Dhaka.
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+The most popular public transport in our country is the bus. According to the Bangladesh Road Transport Authority (BRTA) survey, the number of buses in the country 
+in 2015 was 5407. In 2018, the number stood at 26,691. If we calculate the number of passengers travelling in this number of buses per day, it will stop at crores. For the 
+convenience of many passengers, the Regional Transport Committee has provided bus fare charts for all routes from Dhaka Metro. However, the lion's share of these passengers 
+is unaware of the exact fare of those buses that have been set by the government. As a result, they have to face fraud and deception. At the same time, there are frequent 
+quarrels between the bus fare collectors and the passengers.
+Here comes the Jatra app to solve this particular problem. Suppose the user has set the source and destination in the app and bus lists of that route. In that case, he will get the rout-based bus fare, fixed by the government, the number of traffic jams on the road, estimated arrival time and much more important information using Google Map API. If the user wants, he can use all the facilities offline. This Jatra app can be a valuable companion for passengers with overall bus-route information
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
+<h2 align="center">
+  <a href="https://jatra-admin.netlify.app/">Admin Panel</a>
+</h2>
+<h3 align="center">
+  Credentials:
+</h3>
+<p align="center">
+  Email: admin@gmail.com <br/>
+  Password: 123456
+</p>
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technology Used
+• React Js <br/>
+• Tailwind CSS <br/>
+• Firebase <br/>
+• React Router DOM <br/>
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+clone the repository in your local machine, and run these following commands
+```sh
+npm install
+```
+after installing the packages, run this
+```sh
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## [Jatra](https://github.com/AsadujjamanMridul/jatra/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# jatra-admin
+###### `Thank you`
